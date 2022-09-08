@@ -1,0 +1,30 @@
+
+/*
+LOCAL cNOMECLI :=  ""
+ALERT(cNOMECL)
+EXEC_CALC1()
+EXEC_CAL1()
+-------------------------------------------- PROGR.EXE
+12.1.27 - 1 RPO
+12.1.33 - 1 RPO FONTES PADROES
+          2 RPO CUSTOMIZADOS
+
+SMARTCLIENT    --> APPSERVER --> REPOSITORIO
+JOB (SCHEDULE) --> APPSERVER --> REPOSITORIO
+*/
+
+/*
+99999 25/08/2022 marcelo
+FSKHFSDKLJFHSDAJLKFHSDAJFHSDAJKLFH
+FDYHFSDAJKFHKSJDLHFSDJFHSDAJKFHSDA
+FHDSJGJKFAHSDJKFAHDSKJFSAHDKJFAHDS
+FADHSKRYRJFHDSAJKFHSDAJKFHSDAJKHFS
+*/
+USER FUNCTION CALCULA1()
+nVALOR  := 0  // sera usada para tal motivo
+cCODCLI := "" && esse linha tb sera tratada como comentario
+// a instrucao abaixo apresenta janela na tela
+*  esse linha tb sera tratada como comentario
+ALERT(nVALOR)
+RETURN
+

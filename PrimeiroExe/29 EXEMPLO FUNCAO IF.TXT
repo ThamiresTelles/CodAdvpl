@@ -1,0 +1,63 @@
+
+IF( ALLTRIM(SE5->E5_NATUREZ) $ "1240111001/1115111007",SED->ED_CREDIT, SA2->A2_CONTA) 
+
+1000,00 1240111001 
+105,00  4645645454
+
+IF( ALLTRIM(SE5->E5_NATUREZ) $ "1240111001/1115111007" , SED->ED_CREDIT , U_LP56D() ) 
+
+IF ALLTRIM(SE5->E5_NATUREZ) $ "1240111001/1115111007"
+   cCONTA := SED->ED_CREDIT
+ELSE
+	//cCONTA := SA2->A2_CONTA
+	cCONTA := U_LP56D()
+ENDIF	
+
+
+//------------------------------------------------------------------------------------
+// exemplo de uso da funcao IF() substituindo as intrucoes IF.. ELSEIF.. ENDIF
+//------------------------------------------------------------------------------------
+
+USER FUNCTION PROGR1()
+LOCAL lEXIST
+LOCAL cVAR  := "SAO"
+LOCAL cTEM  := "SAO PAULO 15"
+IF cVAR $ cTEM 
+   lEXIST := .T.
+ELSE
+   lEXIST := .F.
+ENDIF	
+...
+RETURN
+
+USER FUNCTION PROG2()
+LOCAL lEXIST
+LOCAL cVAR  := "SAO"
+LOCAL cTEM  := "SAO PAULO 15"
+lEXIST := IF( cVAR $ cTEM , .T. , .F. )
+...
+RETURN
+
+//------------------------------------------------------------------------------------
+// exemplo de uso da funcao IF() substituindo as intrucoes IF.. ELSEIF.. ENDIF
+//------------------------------------------------------------------------------------
+
+USER FUNCTION PROGR3()
+LOCAL nALIQ := 0
+LOCAL cEST  := "SP"
+IF cEST="SP"
+   nALIQ = 10
+ELSEIF cEST="MG"
+   nALIQ = 9
+ELSE 
+   nALIQ = 7
+ENDIF	
+RETURN
+
+
+
+
+   
+
+	
+	

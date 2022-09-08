@@ -1,0 +1,18 @@
+#INCLUDE "PRTOHEUS.OH"
+
+
+USER FUNCTION xHtml ()
+
+	Local cMsgHtml := ''
+
+	cMsgHtml := '<h1>Atenção</h1>'
+    cMsgHtml := '<BR>Teste com html <b> Negrito</b>'
+    cMsgHtml := '<br><br>'
+    cMsgHtml := 'Data de hoje: <font color="#FF0000">' +
+    DtoC (Date ()) + '</font><br>'
+    cMsgHtml += 'Hora atual: < font color="#FF0000">' + Time () +
+    '</font>'
+
+    Alert (cMsgHtml)
+    MsgInfo(cMsgHtml, "teste")
+    RETURN

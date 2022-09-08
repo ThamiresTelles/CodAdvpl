@@ -1,0 +1,21 @@
+ 
+USER FUNCTION MARCELO()
+LOCAL nVAL := 0
+
+	ALERT(nVAL) // mostra 0
+	
+	nVAL := 1
+	ALERT(nVAL) // mostra 1
+
+	GUI( nVAL )
+	ALERT( nVAL ) // mostra 1 porque a funcao GUI() abaixo manipulou a variavel nVALOR nao a nVAL
+	
+RETURN
+
+
+
+STATIC FUNCTION GUI( nVALOR )
+ALERT( nVALOR ) // mostra 1
+nVALOR := 2
+ALERT( nVALOR ) // mostra 2
+RETURN	

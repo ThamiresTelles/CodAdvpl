@@ -1,0 +1,32 @@
+ 
+USER FUNCTION MARCELO()
+LOCAL nVAL   := 0
+LOCAL nQUANT := 100
+
+	ALERT(nVAL) // mostra 0
+	
+	nVAL := 1
+	ALERT(nVAL) // mostra 1
+
+	// vou passar o parametro para a funcao GUI() e quero quer ela altere o valor da minha variavel 
+	// no caso nVAL
+	// quanto informo o "@" antes da variavel, estou passando PARAMETRO POR REFERENCIA
+	//
+	// tambem estou passando parametro com a variavel nQUANT, porem essa esta sendo passado por VALOR
+	// nesse caso, ela nao sofrera qualquer alteracao pela funcao GUI()
+	//	
+	GUI( @nVAL , nQUANT )
+
+   ALERT( nQUANT ) // mostra 100
+	ALERT( nVAL )   // mostra 2 porque a funcao GUI() abaixo manipulou a variavel nVALOR nao a nVAL
+	
+RETURN
+
+
+
+STATIC FUNCTION GUI( nVALOR, nQTD )
+	ALERT( nVALOR ) // mostra 1
+	nVALOR := 2
+	ALERT( nVALOR ) // mostra 2
+	nQTD := 999
+RETURN	

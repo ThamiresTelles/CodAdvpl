@@ -1,0 +1,21 @@
+
+USER FUNCTION TESTE()
+
+// nomes de variaveis incorretos
+1QUANT        := 0      // ERRADO nao pode inic com num
+&NOME         := "JOSE" // ERRADO nao pode inic com caractere especial
+QUANT VENDIDA := 0      // ERRADO nao pode ter espacos
+
+// nomes corretos
+nQUANT        := 0
+cNOME         := "JOSE"
+nQuant_venda1 := 5  // nome que sera reconhecido "nQuant_ven" --> primeiros 10 caracteres
+nQuant_venda2 := 8
+
+// atencao: cuidar para escrever no maximo 10 caracteres
+
+// advpl nao diferencia minusculo de MAIUSCULO
+cNOMECLI      := "ANA"
+cnomecli      := "PEDRO"
+cNomeCli      := "JOSE"
+

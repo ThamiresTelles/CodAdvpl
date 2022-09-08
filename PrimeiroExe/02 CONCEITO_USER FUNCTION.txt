@@ -1,0 +1,23 @@
+
+// nome da funcao nao pode ter mais que 8
+// caracteres
+USER FUNCTION PRINCIP1()
+              12345678
+...
+...
+U_CALC1()
+...
+...
+...
+RETURN
+
+
+// esse tipo de funcao sempre tem que ser
+// executada usando U_NOME()
+USER FUNCTION CALC1()
+nVAL1   := 1
+nVAL2   := 2
+nRESULT := nVAL1 + nVAL2
+RETURN
+
+

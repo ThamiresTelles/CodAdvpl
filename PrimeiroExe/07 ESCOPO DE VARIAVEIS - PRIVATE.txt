@@ -1,0 +1,31 @@
+
+USER FUNCTION MARCELO()
+PRIVATE nVAL := 0 // declarando a variavel com escopo PRIVATE
+
+	ALERT(nVAL) // MOSTRA CONTEUD NA TELA --> 0
+
+	nVAL := 1
+	ALERT(nVAL) // MOSTRA CONTEUD NA TELA --> 1
+
+	AUX1()
+	ALERT(nVAL) // MOSTRA CONTEUD NA TELA --> 7
+
+   U_AUX3() // essa funcao esta escrita em outro PRW, porem ela enxergara as variaveis PRIVATE criadas dentro do marcelo()
+
+RETURN
+
+
+// todas as variaveis com SCOPO private criadas dentro do MARCELO()
+// serao enxergadas pela funcao AUX1()
+STATIC FUNCTION AUX1()
+nVAL := 6
+AUX2()
+RETURN
+
+
+
+STATIC FUNCTINO AUX2()
+ALERT(nVAL) // MOSTRA 6
+nVAL := 7
+RETURN
+

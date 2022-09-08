@@ -1,0 +1,33 @@
+
+// variaveis PRIVATE e LOCAL sao eliminadas apos a finalizacao da funcao 
+// onde foram criadas
+
+STATIC cHORA := TIME() // variavel com esse ESCOPO estara disponvel para todas
+                       // as funcoes escritas dentro desse programa
+
+USER FUNCTION TRATA01()
+	LOCAL cNOME     := "JOSE"
+	PRIVATE nVALOR1 := 0 
+[	PRIVATE nVALOR2 := 0
+	PUBLIC cNOMEUSER := "MARCELO"
+	ALERT("TESTE")
+	ALERT(cHORA)
+	...
+	...
+RETURN
+
+
+USER FUNCTION TRATA02()
+	PRIVATE cTESTE := "12312"
+	ALERT(cNOMEUSER)
+	ALERT(cHORA)
+RETURN
+
+
+
+
+
+
+
+
+

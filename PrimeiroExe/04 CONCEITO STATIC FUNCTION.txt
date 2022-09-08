@@ -1,0 +1,24 @@
+
+USER FUNCTION RELPROD()
+...
+CALC1()
+CALCEST()
+...
+RETURN
+
+
+
+
+// esse tipo de programa SOMENTE podera ser
+// executado dentro do PRW onde foi criado
+STATIC FUNCTION CALC1()
+X := 1
+Y := 2
+Z := X * Y
+RETURN
+
+
+STATIC FUNCTION CALCEST()
+...
+...
+RETURN
